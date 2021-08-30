@@ -4,7 +4,6 @@ import { HttpClient} from '@angular/common/http'
 import { environment } from 'src/environments/environment';
 import { User } from 'src/app/models/user';
 import { TestBed } from '@angular/core/testing';
-import { Department } from 'src/app/models/department';
 
 @Injectable({
   providedIn: 'root'

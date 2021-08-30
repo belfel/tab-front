@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from 'src/app/services/authentication/authentication.service';
-import { Department } from 'src/app/models/department';
 
 @Component({
   selector: 'app-login',
@@ -10,8 +9,6 @@ import { Department } from 'src/app/models/department';
 export class LoginComponent implements OnInit {
 
   constructor(private authenticationService: AuthenticationService) { }
-
-  dep: Department[] =[];
 
   ngOnInit(): void {
     this.authenticationService.login("admin", "admin").subscribe((response) => {
