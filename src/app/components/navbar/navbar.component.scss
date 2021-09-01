@@ -1,4 +1,24 @@
-.mat-card {
-    background-color:chocolate;
-    height: 4%;
-}
+  a {
+    color: #FFF;
+    font-size: larger;
+  }
+  
+  a:hover {
+    color: #FFF
+  }
+  
+  .spacer {
+    flex: auto;
+  }
+
+  mat-toolbar {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0; 
+    z-index: 9999; 
+    background-color: chocolate;
+  }
+  
+  mat-icon:hover {
+    cursor: pointer;
+  }

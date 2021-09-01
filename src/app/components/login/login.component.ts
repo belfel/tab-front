@@ -30,8 +30,9 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     this.authenticationService.login(this.f.username.value.trim(), this.f.password.value.trim())
       .subscribe((user) => {
-          console.log(user);
-          this.router.navigate(['/home']);
+          if (user.Login != undefined) {
+           this.router.navigate(['/home']);
+        }
       })
   }
 }

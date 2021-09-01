@@ -55,6 +55,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { RegisterComponent } from './components/register/register.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
+import { CandidatesComponent } from './components/candidates/candidates.component';
 
 
 @NgModule({
@@ -65,6 +66,7 @@ import { CalendarComponent } from './components/calendar/calendar.component';
     HomeComponent,
     RegisterComponent,
     CalendarComponent,
+    CandidatesComponent,
   ],
   imports: [
     BrowserModule,

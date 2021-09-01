@@ -1,1 +1,21 @@
-<mat-card></mat-card>
+  
+<mat-toolbar>
+  <a mat-button [routerLink]="'./home'" (click)="gotoHome()">
+    <mat-icon>home</mat-icon>
+  </a>
+  <a *ngIf="!isAdmin" mat-button [routerLink]="'./calendar'">Kalendarz</a>
+  <a *ngIf="!isAdmin" mat-button [routerLink]="'./candidates'">Kandydaci</a>
+  <a *ngIf="isAdmin" mat-button [routerLink]="'./workers'">Pracownicy</a>
+
+  <div class="spacer"></div>
+  <div *ngIf="!isLoggedIn(); else else_block">
+    <button mat-icon-button>
+      <mat-icon  [routerLink]="'./login'">exit_to_app</mat-icon>
+    </button>
+  </div>
+  <ng-template #else_block>
+    <button mat-icon-button (click)="logout()">
+      <mat-icon>exit_to_app</mat-icon>
+    </button>
+  </ng-template>
+</mat-toolbar>
